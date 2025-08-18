@@ -2,374 +2,270 @@
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="GJGnLUpSySBvmTquCS8vIwzQnEBOmVVfU3PNBj6DFW4" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CapCut — Video Editor (Official) Landing</title>
-  <meta name="description" content="Create stunning videos with CapCut. Clean, modern landing page with features, safe download steps, FAQs, and more." />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CapCut Mod APK — Carbon Edge</title>
+  <meta name="description" content="Dark carbon UI with electric blue accents. Distinct service-style landing page for CapCut Mod APK concepts."/>
   <style>
     :root{
-      --bg:#0b0f14;
-      --panel:#0f1520;
-      --panel-2:#0d1320;
-      --ink:#e7f0ff;
-      --muted:#a7b4c8;
-      --blue:#3aa8ff;
-      --blue-2:#1e90ff;
-      --outline:#1e293b;
-      --accent:#58b8ff;
-      --ok:#22c55e;
-      --warn:#f59e0b;
-      --danger:#ef4444;
-      --shadow: 0 8px 28px rgba(0,0,0,.35);
-      --radius: 16px;
+      --bg:#0a0d12;
+      --surface:#0e1220;
+      --surface-2:#0c1322;
+      --text:#e8f1ff;
+      --muted:#9cb1c9;
+      --blue:#2f8bff;
+      --cyan:#61e7ff;
+      --line:rgba(47,139,255,.25);
+      --radius:16px;
+      --shadow:0 10px 40px rgba(0,0,0,.5);
+      --neon:0 0 24px rgba(47,139,255,.5);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--ink);font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif; line-height:1.6}
-    a{color:var(--blue);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:auto;padding:0 20px}
-    .pill{display:inline-block;padding:.35rem .75rem;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));color:var(--muted);font-size:.85rem;letter-spacing:.02em}
-    /* Header / Hero */
-    header{position:relative;overflow:hidden;background:
-      radial-gradient(1200px 600px at 10% -10%, rgba(30,144,255,.25), transparent 60%),
-      radial-gradient(900px 500px at 110% 10%, rgba(58,168,255,.18), transparent 60%),
-      linear-gradient(180deg, #09101a, #0b0f14 60%)}
-    .hero{padding:96px 0 64px; display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:center}
-    @media (max-width: 900px){.hero{grid-template-columns:1fr; padding:72px 0 48px}}
-    .hero h1{font-size: clamp(2rem, 3.8vw, 3rem); line-height:1.15; margin:.25rem 0 .75rem}
-    .hero p{color:var(--muted); font-size:1.05rem; max-width:58ch}
-    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:linear-gradient(180deg,#1a2333,#121826); color:#fff; font-weight:600; box-shadow: var(--shadow); transition:.2s transform, .2s box-shadow}
+    body{margin:0; font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text)}
+    a{color:var(--cyan); text-decoration:none}
+    header{
+      position:sticky; top:0; z-index:50;
+      background:linear-gradient(180deg, rgba(14,18,32,.95), rgba(14,18,32,.7));
+      border-bottom:1px solid var(--line); backdrop-filter:blur(10px);
+    }
+    .wrap{max-width:1200px; margin:0 auto; padding:0 20px}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:10px; align-items:center}
+    .mark{
+      width:34px; height:34px; border-radius:10px; display:grid; place-items:center;
+      background:conic-gradient(from 180deg at 50% 50%, #194bff, #2f8bff, #61e7ff, #194bff);
+      color:#021024; font-weight:900; box-shadow:var(--neon), inset 0 0 18px rgba(255,255,255,.12);
+    }
+    .nav a{padding:8px 12px; border-radius:12px; border:1px solid transparent}
+    .nav a:hover{border-color:var(--line)}
+    /* HERO */
+    .hero{
+      position:relative; overflow:hidden; padding:60px 0 40px;
+      background:
+        linear-gradient(180deg, rgba(47,139,255,.06), transparent 30%),
+        linear-gradient(90deg, rgba(97,231,255,.05), transparent 40%),
+        var(--surface);
+      border-bottom:1px solid var(--line);
+    }
+    .skew{
+      position:absolute; inset:auto -10% 0 -10%; height:120px;
+      background:linear-gradient(90deg, rgba(47,139,255,.15), rgba(97,231,255,.08));
+      transform:skewY(-6deg); filter:blur(14px);
+    }
+    .hero-grid{
+      display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:center;
+    }
+    @media (max-width:980px){.hero-grid{grid-template-columns:1fr}}
+    h1{font-size:42px; margin:0 0 10px}
+    .sub{color:#cfe4ff; max-width:60ch}
+    .cta{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; gap:10px; align-items:center; padding:12px 18px; border-radius:14px;
+      background:linear-gradient(135deg, var(--blue), #194bff); color:#04101f; font-weight:800;
+      box-shadow:var(--neon); border:0; cursor:pointer; transition:.15s transform;
+    }
     .btn:hover{transform:translateY(-2px)}
-    .btn.primary{background:linear-gradient(180deg, var(--blue-2), #1978e6)}
-    .btn .icon{width:20px;height:20px;display:inline-block}
-    .glass{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow: var(--shadow)}
-    .mock{aspect-ratio:16/10; background:
-      linear-gradient(135deg, rgba(58,168,255,.25), rgba(30,144,255,.08) 35%, transparent 35%),
-      linear-gradient(180deg,#0c1320,#0a0f19); border:1px solid rgba(255,255,255,.08); border-radius:20px;
-      display:grid; place-items:center; color:#cfe7ff; font-weight:700}
-    /* Section titles */
-    section{padding:56px 0}
-    .section-head{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px}
-    .section-head h2{margin:0; font-size: clamp(1.4rem, 2.8vw, 2rem)}
-    .section-sub{color:var(--muted); margin-top:4px}
-    /* Features grid with varied card styles */
-    .grid{display:grid; gap:16px}
-    .grid.cols-3{grid-template-columns: repeat(3, 1fr)}
-    .grid.cols-2{grid-template-columns: repeat(2, 1fr)}
-    @media (max-width: 900px){.grid.cols-3{grid-template-columns:1fr 1fr}}
-    @media (max-width: 640px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
-    .card{padding:18px; border-radius:16px; position:relative}
-    .card h3{margin:.2rem 0 .35rem; font-size:1.05rem}
-    .card p{color:var(--muted); font-size:.98rem; margin:0}
-    .style-solid{background:var(--panel); border:1px solid var(--outline)}
-    .style-outline{background:transparent; border:1px dashed rgba(88,184,255,.55)}
-    .style-glass{background:linear-gradient(180deg, rgba(58,168,255,.08), rgba(255,255,255,.02)); border:1px solid rgba(58,168,255,.25)}
-    .style-gradient{background:
-      linear-gradient(180deg, rgba(30,144,255,.18), rgba(30,144,255,.05)); border:1px solid rgba(30,144,255,.35)}
-    .style-border{background:var(--panel-2); border:1px solid rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px rgba(58,168,255,.18)}
-    .badge{position:absolute; top:12px; right:12px; font-size:.7rem; padding:.25rem .5rem; border-radius:999px; background:rgba(34,197,94,.12); color:#86efac; border:1px solid rgba(34,197,94,.35)}
-    /* Pros & Cons */
-    .split{display:grid; grid-template-columns: 1fr 1fr; gap:20px}
-    @media (max-width: 900px){.split{grid-template-columns:1fr}}
-    .list{padding-left:1.1rem; margin:0}
-    .list li{margin:.4rem 0}
-    .ok{color:var(--ok)} .warn{color:var(--warn)} .danger{color:var(--danger)}
+    .btn.alt{background:transparent; color:#d9eeff; border:1px solid var(--line); box-shadow:none}
+    .frame{
+      border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow);
+      background:linear-gradient(180deg, rgba(12,19,34,.9), rgba(8,12,22,.95));
+      aspect-ratio:16/9; width:100%; position:relative; overflow:hidden;
+    }
+    .dots{position:absolute; inset:0; background-image:radial-gradient(rgba(97,231,255,.25) 1px, transparent 1px); background-size:18px 18px; opacity:.25}
+    /* FEATURES */
+    section{padding:44px 0}
+    .section-head{display:flex; align-items:end; justify-content:space-between; gap:14px; flex-wrap:wrap}
+    .badges{display:flex; gap:8px; flex-wrap:wrap}
+    .badge{font-size:.78rem; border:1px dashed var(--line); color:#95d6ff; padding:4px 10px; border-radius:999px}
+    .mosaic{
+      display:grid; gap:16px; grid-template-columns:repeat(12,1fr);
+    }
+    @media (max-width:1100px){.mosaic{grid-template-columns:repeat(6,1fr)}}
+    @media (max-width:640px){.mosaic{grid-template-columns:repeat(1,1fr)}}
+    .tile{
+      grid-column:span 4; background:
+        linear-gradient(180deg, rgba(14,22,36,.9), rgba(8,14,26,.92));
+      border:1px solid var(--line); border-radius:14px; padding:16px; position:relative; overflow:hidden;
+    }
+    .tile.big{grid-column:span 6}
+    .tile h3{margin:6px 0; font-size:1.02rem}
+    .tile p{margin:0; color:#b9cde2}
+    .tag{position:absolute; top:10px; right:10px; font-size:.7rem; color:#8fd2ff; border:1px solid var(--line); padding:4px 8px; border-radius:999px}
+    /* HOW TO */
+    .steps{display:grid; gap:14px; grid-template-columns:repeat(4,1fr)}
+    @media (max-width:980px){.steps{grid-template-columns:1fr}}
+    .step{
+      border:1px solid var(--line); border-radius:14px; padding:16px;
+      background:linear-gradient(180deg, rgba(12,20,34,.9), rgba(10,16,28,.95));
+    }
+    .step b{color:#d8eeff}
+    /* PROS/CONS */
+    .columns{display:grid; gap:18px; grid-template-columns:1fr 1fr}
+    @media (max-width:980px){.columns{grid-template-columns:1fr}}
+    .panel{
+      border:1px solid var(--line); border-radius:16px; padding:16px;
+      background:linear-gradient(180deg, rgba(10,18,32,.92), rgba(8,14,26,.96));
+    }
+    ul{margin:0; padding-left:18px}
+    li{margin:8px 0}
     /* FAQ */
-    details{border:1px solid rgba(255,255,255,.07); background:linear-gradient(180deg,#0b111b,#0a0f18); border-radius:12px; padding:14px 16px}
-    details+details{margin-top:10px}
-    summary{cursor:pointer; font-weight:600}
-    details p{color:var(--muted); margin:.6rem 0 0}
-    /* Footer */
-    footer{padding:28px 0; border-top:1px solid rgba(255,255,255,.06); background:linear-gradient(180deg,#0a0f16,#090e14)}
-    .foot{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
-    .small{color:var(--muted); font-size:.92rem}
-    /* Utilities */
-    .hr{height:1px; background:linear-gradient(90deg, transparent, rgba(88,184,255,.35), transparent); margin:18px 0}
-    .note{font-size:.92rem; color:var(--muted)}
-    .cta-rail{display:flex; gap:10px; flex-wrap:wrap}
-    .center{text-align:center}
+    details{
+      border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin:10px 0;
+      background:linear-gradient(180deg, rgba(12,20,34,.9), rgba(8,14,26,.95));
+    }
+    summary{cursor:pointer; font-weight:800}
+    /* FOOTER */
+    footer{
+      margin-top:30px; padding:28px 0; border-top:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(6,10,18,.95), rgba(4,8,16,1)); color:#b3c7dc
+    }
+    .foot{display:grid; gap:16px; grid-template-columns:2fr 1fr 1fr}
+    @media (max-width:900px){.foot{grid-template-columns:1fr}}
+    .tiny{font-size:.85rem; color:#8ca3bb}
   </style>
 </head>
 <body>
   <header>
-    <div class="container hero">
-      <div>
-        <span class="pill">Creative Editing Suite</span>
-        <h1>CapCut — Fast, Powerful & Free Video Editing</h1>
-        <p>
-          Edit like a pro with intuitive tools, crisp effects, and smooth exports. This landing page showcases
-          the official app experience with a sleek, service-style layout in a black + blue theme.
-        </p>
-        <div class="cta">
-          <a href="https://caapcutmodapk.com" class="btn primary" aria-label="Get CapCut from official sources">
-            <!-- download icon -->
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Get Official CapCut APK
-          </a>
-          <a href="#features" class="btn" aria-label="View features">
-            <!-- sparkles icon -->
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 3l1.8 3.7 3.7 1.8-3.7 1.8L12 15l-1.8-3.7L6.5 8.5l3.7-1.8L12 3zM18.5 16l.9 1.8 1.8.9-1.8.9-.9 1.8-.9-1.8-1.8-.9 1.8-.9.9-1.8z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            See Features
-          </a>
-        </div>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="mark">CE</div>
+        <strong>Carbon Edge</strong>
       </div>
-      <div class="glass mock">
-        Preview • CapCut UI
-      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#howto">Download</a>
+        <a href="#faq">FAQ</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Features -->
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>CapCut Mod APK — Carbon Edge Build</h1>
+          <p class="sub">An alternative service-style landing page with a carbon fiber look and electric-blue cues. Buttons are placeholders; use official channels for safe software.</p>
+          <div class="cta">
+            <a class="btn" href="https://caapcutmodapk.com" id="dl">⬇ Download Official APK</a>
+            <a class="btn alt" href="#features">Explore Features</a>
+          </div>
+        </div>
+        <div class="frame">
+          <div class="dots"></div>
+        </div>
+      </div>
+      <div class="skew"></div>
+    </section>
+
     <section id="features">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Built for creators who move fast</h2>
-            <div class="section-sub">A modern toolset that keeps your workflow smooth and your edits sharp.</div>
-          </div>
-          <span class="pill">Black + Blue Edition</span>
+      <div class="section-head">
+        <h2>What You Get</h2>
+        <div class="badges">
+          <span class="badge">Dark UI</span>
+          <span class="badge">Creator-Ready</span>
+          <span class="badge">Performance Focus</span>
         </div>
+      </div>
 
-        <div class="grid cols-3">
-          <article class="card style-solid">
-            <span class="badge">NEW</span>
-            <h3>No-Watermark Exports</h3>
-            <p>Render clean videos ready for clients, social posts, or ads—no overlays or marks.</p>
-          </article>
-          <article class="card style-outline">
-            <h3>4K60 Rendering</h3>
-            <p>Export high-resolution videos with stable frame pacing and crisp motion.</p>
-          </article>
-          <article class="card style-glass">
-            <h3>AI Background Remove</h3>
-            <p>Cut subjects from scenes in a tap—no green screen required.</p>
-          </article>
-          <article class="card style-gradient">
-            <h3>Keyframe Precision</h3>
-            <p>Animate scale, rotation, opacity, and effects with frame-level control.</p>
-          </article>
-          <article class="card style-border">
-            <h3>Speed Ramping</h3>
-            <p>Create buttery slow-mo and punchy time-warps with curve-based control.</p>
-          </article>
-          <article class="card style-solid">
-            <h3>Text & Title Animations</h3>
-            <p>Cinematic captions, kinetic type, and modern lower-thirds in seconds.</p>
-          </article>
-          <article class="card style-outline">
-            <h3>Transitions Library</h3>
-            <p>Drag-and-drop zooms, wipes, glitches, and camera moves that just work.</p>
-          </article>
-          <article class="card style-glass">
-            <h3>Color Filters & LUTs</h3>
-            <p>Bring scenes to life with filmic looks and accurate tone mapping.</p>
-          </article>
-          <article class="card style-gradient">
-            <h3>Chroma Key</h3>
-            <p>Remove green/blue screens with spill suppression and edge control.</p>
-          </article>
-          <article class="card style-border">
-            <h3>Audio Tools</h3>
-            <p>Clean dialogue, balanced music, and auto-ducking for voiceovers.</p>
-          </article>
-          <article class="card style-solid">
-            <h3>Sticker & Asset Hub</h3>
-            <p>Access a growing library of overlays, shapes, and motion elements.</p>
-          </article>
-          <article class="card style-outline">
-            <h3>Template Workflows</h3>
-            <p>Speed up edits with reusable sequences and branded presets.</p>
-          </article>
-          <article class="card style-glass">
-            <h3>Multi-Layer Timeline</h3>
-            <p>Stack clips, effects, and audio tracks with smooth scrubbing.</p>
-          </article>
-          <article class="card style-gradient">
-            <h3>Cloud Sync</h3>
-            <p>Keep projects consistent across devices with secure backups.</p>
-          </article>
-          <article class="card style-border">
-            <h3>Collaboration</h3>
-            <p>Share drafts, gather feedback, and version your edits safely.</p>
-          </article>
-          <article class="card style-solid">
-            <h3>Social-Ready Ratios</h3>
-            <p>Instant canvases for 9:16, 1:1, 16:9, and custom formats.</p>
-          </article>
-          <article class="card style-outline">
-            <h3>Performance Boost</h3>
-            <p>GPU-accelerated effects and smart caching to keep you in flow.</p>
-          </article>
-        </div>
+      <div class="mosaic">
+        <!-- 16+ tiles (mix big and normal) -->
+        <div class="tile big"><span class="tag">No Ads</span><h3>Distraction-Free Editing</h3><p>Keep the timeline clean with an ad-free workspace.</p></div>
+        <div class="tile"><span class="tag">No Watermark</span><h3>Brand-Neutral Exports</h3><p>Deliver client work without overlays.</p></div>
+        <div class="tile"><span class="tag">4K60</span><h3>High-Fidelity Output</h3><p>Smooth framerates with crisp detail up to 4K60.</p></div>
+        <div class="tile"><span class="tag">Audio</span><h3>Voice Enhancer</h3><p>Smart noise cleanup and vocal lift.</p></div>
+
+        <div class="tile big"><span class="tag">AI</span><h3>Auto Cut & Beat Sync</h3><p>Auto-detect beats, trim fillers, and match visuals to music.</p></div>
+        <div class="tile"><span class="tag">Masks</span><h3>Shape & Brush Masks</h3><p>Feather, invert, and track like a pro.</p></div>
+        <div class="tile"><span class="tag">Chroma</span><h3>Keying Controls</h3><p>Fine spill control for clean composites.</p></div>
+        <div class="tile"><span class="tag">Motion</span><h3>Keyframe Curves</h3><p>Ease in/out for buttery motion.</p></div>
+
+        <div class="tile"><span class="tag">Text</span><h3>Subtitle Studio</h3><p>Auto-captions with timing nudges.</p></div>
+        <div class="tile"><span class="tag">Templates</span><h3>Trend Starter Packs</h3><p>Ready-to-use project bases.</p></div>
+        <div class="tile"><span class="tag">FX</span><h3>Glitch & Light Leaks</h3><p>Curated effects for quick stylization.</p></div>
+        <div class="tile"><span class="tag">Color</span><h3>LUT & HSL Panel</h3><p>Grade like a colorist with precision.</p></div>
+
+        <div class="tile"><span class="tag">Stabilize</span><h3>Jitter Smoother</h3><p>Reduce shake with adaptive analysis.</p></div>
+        <div class="tile"><span class="tag">Reverse</span><h3>Time Tricks</h3><p>Reverse & boomerang moments.</p></div>
+        <div class="tile"><span class="tag">Formats</span><h3>Wide Codec Support</h3><p>Import/Export flexibility for workflows.</p></div>
+        <div class="tile"><span class="tag">Social</span><h3>One-Tap Ratios</h3><p>Switch between 9:16, 1:1, 16:9, and more.</p></div>
       </div>
     </section>
 
-    <div class="hr container" role="presentation"></div>
+    <section id="howto">
+      <h2>How to Download (Safe, Generic Steps)</h2>
+      <div class="steps">
+        <div class="step"><b>Step 1: <a href="https://caapcutmodapk.codeberg.page/caapcutmodapk/">Verify the source</a>a</b><br>Prefer official stores. If you host files, provide clear checksums.</div>
+        <div class="step"><b>Step 2: Scan before you run</b><br>Use mobile security tools and review required permissions.</div>
+        <div class="step"><b>Step 3: Backups</b><br>Backup important data before installing any APKs.</div>
+        <div class="step"><b>Step 4: Stay compliant</b><br>Follow local laws and the original app’s terms of service.</div>
+      </div>
+      <p class="tiny" style="margin-top:10px">This site is a design template only. Replace links with your own lawful destinations.</p>
+    </section>
 
-    <!-- How to Download (Official Sources) -->
-    <section id="download">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>How to Download Safely</h2>
-            <div class="section-sub">Always use official app stores or the developer’s website.</div>
-          </div>
-          <span class="pill">Safety First</span>
-        </div>
-
-        <ol class="glass" style="padding:16px 20px; margin:0; border-radius:16px">
-          <li>Open your device’s official app store (Google Play or Apple App Store).</li>
-          <li>Search for <strong>“<a href="https://caapcutmodapk.lovable.app/">CapCut – Video Editor</a>a”</strong> by the official publisher.</li>
-          <li>Tap <em>Install</em> and wait for the download to complete.</li>
-          <li>Launch the app and sign in to sync projects across devices.</li>
-          <li>Update regularly to access the latest tools and security fixes.</li>
-        </ol>
-
-        <div class="cta-rail" style="margin-top:16px">
-          <a class="btn primary" href="#" aria-label="Get on Google Play">
-            <!-- play icon -->
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 3l14 9L4 21V3z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
-            </svg>
-            Get on Google Play
-          </a>
-          <a class="btn" href="#" aria-label="Get on App Store">
-            <!-- apple icon -->
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M16 13c0-3 2.5-4 2.5-4s-1.5-2.5-4.5-2.5-4 2-4 2S8.5 8 6.5 8 3 10.5 3 13c0 4 3.5 8 6 8 1.5 0 2-.5 3-1s1.5 1 3 1c2.5 0 6-4 6-8z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Get on App Store
-          </a>
-        </div>
-
-        <p class="note" style="margin-top:12px">
-          <strong>Note:</strong> Avoid unofficial or modified APKs—they can violate terms of service and pose security risks.
-        </p>
+    <section class="columns">
+      <div class="panel">
+        <h2>Pros</h2>
+        <ul>
+          <li>Modern, low-light interface with high contrast</li>
+          <li>Streamlined feature access for fast edits</li>
+          <li>Advanced color, audio, and motion features</li>
+          <li>On-brand blue accents for tech services</li>
+          <li>Flexible, modular sections for marketing</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>Cons</h2>
+        <ul>
+          <li>Unofficial builds may be risky or prohibited</li>
+          <li>No guaranteed updates or support channels</li>
+          <li>Possible compatibility issues by device</li>
+          <li>Potential account limitations</li>
+          <li>Security concerns with third-party files</li>
+        </ul>
       </div>
     </section>
 
-    <div class="hr container" role="presentation"></div>
-
-    <!-- Pros & Cons -->
-    <section id="pros-cons">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Pros & Cons</h2>
-            <div class="section-sub">A balanced look to help you choose with confidence.</div>
-          </div>
-          <span class="pill">Transparent Review</span>
-        </div>
-
-        <div class="split">
-          <div class="glass" style="padding:18px; border-radius:16px">
-            <h3 class="ok">Pros</h3>
-            <ul class="list">
-              <li>Beginner-friendly with pro-level depth when you need it.</li>
-              <li>Rich effects library and frequent feature updates.</li>
-              <li>Fast rendering for common social formats.</li>
-              <li>Strong mobile workflow with cloud sync.</li>
-            </ul>
-          </div>
-
-          <div class="glass" style="padding:18px; border-radius:16px">
-            <h3 class="warn">Cons</h3>
-            <ul class="list">
-              <li>Advanced color work is more limited than desktop NLEs.</li>
-              <li>Large projects can tax older devices.</li>
-              <li>Asset management requires tidy naming for complex edits.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <section>
+      <h2>Conclusion</h2>
+      <p class="panel">Carbon Edge is a distinct service-style landing page for showcasing a CapCut Mod APK concept with a black & blue aesthetic. For reliable performance, updates, and support, the official CapCut app remains the recommended choice.</p>
     </section>
 
-    <div class="hr container" role="presentation"></div>
-
-    <!-- Conclusion -->
-    <section id="conclusion">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Conclusion</h2>
-            <div class="section-sub">Create with confidence—edit fast, look polished.</div>
-          </div>
-          <span class="pill">Editor’s Take</span>
-        </div>
-        <div class="glass" style="padding:18px">
-          CapCut delivers an accessible editing experience with enough power to produce eye-catching videos for social and clients.
-          Stick to official sources for the best performance, features, and security.
-        </div>
-      </div>
-    </section>
-
-    <div class="hr container" role="presentation"></div>
-
-    <!-- FAQs -->
-    <section id="faqs">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>FAQs</h2>
-            <div class="section-sub">Quick answers to common questions.</div>
-          </div>
-          <span class="pill">Helpful Info</span>
-        </div>
-
-        <details>
-          <summary>Is CapCut free?</summary>
-          <p>Yes, CapCut is free to use with optional premium assets and features.</p>
-        </details>
-        <details>
-          <summary>Where should I download CapCut?</summary>
-          <p>Only from official sources like Google Play or the Apple App Store to ensure authenticity and security.</p>
-        </details>
-        <details>
-          <summary>Does it support 4K exports?</summary>
-          <p>Yes—4K and high-frame-rate exports are supported on capable devices.</p>
-        </details>
-        <details>
-          <summary>Can I edit multiple layers?</summary>
-          <p>Absolutely. Stack video, audio, titles, and overlays with timeline control.</p>
-        </details>
-        <details>
-          <summary>Will my projects sync across devices?</summary>
-          <p>Sign in to enable cloud backups and cross-device access where available.</p>
-        </details>
-      </div>
+    <section id="faq">
+      <h2>FAQs</h2>
+      <details><summary>Do you provide the APK?</summary><p>No, this page is a design template. Replace buttons with your own lawful links or the official store.</p></details>
+      <details><summary>Is a mod APK legal?</summary><p>It depends on your jurisdiction and terms of service. When in doubt, use the official app.</p></details>
+      <details><summary>Will this remove ads/watermarks?</summary><p>Functionality depends on the actual build. This page describes a potential feature set only.</p></details>
+      <details><summary>Can I customize this template?</summary><p>Yes. Update colors, copy, and layout to match your brand.</p></details>
+      <details><summary>Why is the download a placeholder?</summary><p>To avoid distributing unauthorized files. Swap the link responsibly.</p></details>
     </section>
   </main>
 
   <footer>
-    <div class="container foot">
+    <div class="wrap foot">
       <div>
-        <strong>CapCut • Creative Editing</strong>
-        <div class="small">This is a demo landing page layout. Use official sources for <a href="https://caapcutmodapk.gitbook.io/caapcutmodapk/">downloads</a>a.</div>
+        <b>Carbon Edge Theme</b>
+        <div class="tiny">Design template only — no files are hosted here.</div>
       </div>
-      <div class="small">© <a href="https://caapcutmodapk.com">CaapCutMODAPK 2025</a>.</div>
+      <div>
+        <b>Navigate</b>
+        <div><a href="#features">Features</a></div>
+        <div><a href="https://caapcutmodapk.netlify.app/">Download</a></div>
+        <div><a href="#faq">FAQ</a></div>
+      </div>
+      <div>
+        <b>Info</b>
+        <div class="tiny">© CaapCutMODAPK. All trademarks belong to their respective owners.</div>
+      </div>
     </div>
   </footer>
 
   <script>
-    // Smooth scroll for in-page anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if(el){
-          e.preventDefault();
-          el.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      });
+    document.getElementById('dl').addEventListener('click', e=>{
+      if(e.target.getAttribute('href')==='#'){
+        e.preventDefault();
+        alert('Placeholder link. Replace with your own URL or use the official app store.');
+      }
     });
   </script>
 </body>
 </html>
-
-
